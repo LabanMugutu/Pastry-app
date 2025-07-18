@@ -27,3 +27,11 @@ function displayRecipes(recipes) {
       <p>${recipe.instructions}</p>
       <button class="favorite-btn"> Favorite</button>
     `;
+     // Handle favorite button click (Event 3)
+    const favBtn = card.querySelector(".favorite-btn");
+    favBtn.addEventListener("click", () => toggleFavorite(favBtn));
+
+    // Append card to page
+    recipeList.appendChild(card);
+  });
+}
