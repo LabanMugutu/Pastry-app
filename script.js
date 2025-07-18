@@ -66,6 +66,9 @@ filterSelect.addEventListener("change", () => {
 // Event 3: Toggle favorite/unfavorite button text
 function toggleFavorite(button) {
   button.textContent =
-    button.textContent === " Favorite" ? " Unfavorite" : "❤️Favorite";
+    button.textContent === " Favorite" ? " Unfavorite" : "Favorite";
 }
+
+// Initial fetch to load all recipes
+fetchRecipes();
 
