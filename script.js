@@ -1,74 +1,94 @@
-// Base URL of json-server
-const baseURL = "http://localhost:3000/recipes";
-// Get references to HTML elements
+// Replace this with your actual Render API URL
+const baseURL = "https://your-render-api-url.onrender.com/recipes";
+
+// DOM references
 const recipeList = document.getElementById("recipe-list");
 const searchInput = document.getElementById("search");
 const filterSelect = document.getElementById("filter");
+
+// Fetch all recipes from the backend and render them
 function fetchRecipes() {
   fetch(baseURL)
-    .then(res => res.json())       // Convert response to JSON
+    .then(response => response.json())
     .then(data => {
-      displayRecipes(data);        // Pass recipes to render function
+      displayRecipes(data);
+    })
+    .catch(error => {
+      console.error("Error fetching recipes:", error);
+      recipeList.innerHTML = "<p>Failed to load recipes. Please try again later.</p>";
     });
 }
-// Render the recipe cards on the page
+
+// Render recipe cards on the page
 function displayRecipes(recipes) {
-  recipeList.innerHTML = ""; // Clear current content
+  recipeList.innerHTML = ""; // Clear existing content
 
   recipes.forEach(recipe => {
-    // Create card container
     const card = document.createElement("div");
     card.className = "recipe-card";
-    // Add recipe content
+
+    // Fill the card with recipe info
     card.innerHTML = `
       <h3>${recipe.name}</h3>
       <p><strong>Category:</strong> ${recipe.category}</p>
       <p><strong>Ingredients:</strong> ${recipe.ingredients.join(", ")}</p>
       <p>${recipe.instructions}</p>
-      <button class="favorite-btn"> Favorite</button>
+      <button class="favorite-btn">❤️ Favorite</button>
     `;
-     // Handle favorite button click (Event 3)
+
+    // Event 3: Click to toggle favorite
     const favBtn = card.querySelector(".favorite-btn");
     favBtn.addEventListener("click", () => toggleFavorite(favBtn));
 
-    // Append card to page
+    // Add the card to the DOM
     recipeList.appendChild(card);
   });
 }
-// Event 1: Filter recipes by search term
+
+// Event 1: Search functionality
 searchInput.addEventListener("input", () => {
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
       const searchTerm = searchInput.value.toLowerCase();
- // Filter recipes by name (array iteration)
+
+      // Use array.filter() to search recipes by name
       const filtered = data.filter(recipe =>
         recipe.name.toLowerCase().includes(searchTerm)
       );
 
       displayRecipes(filtered);
+    })
+    .catch(error => {
+      console.error("Search error:", error);
     });
 });
-// Event 2: Filter recipes by category
+
+// Event 2: Filter by category dropdown
 filterSelect.addEventListener("change", () => {
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
-      const category = filterSelect.value;
+      const selectedCategory = filterSelect.value;
 
-      // If "All" is selected, show everything; otherwise filter
+      // Filter recipes by category or return all
       const filtered =
-        category === "All" ? data : data.filter(r => r.category === category);
+        selectedCategory === "All"
+          ? data
+          : data.filter(recipe => recipe.category === selectedCategory);
 
       displayRecipes(filtered);
+    })
+    .catch(error => {
+      console.error("Filter error:", error);
     });
 });
-// Event 3: Toggle favorite/unfavorite button text
+
+// Toggle favorite button text
 function toggleFavorite(button) {
   button.textContent =
-    button.textContent === " Favorite" ? " Unfavorite" : "Favorite";
+    button.textContent === " Favorite" ? " Unfavorite" : " Favorite";
 }
 
-// Initial fetch to load all recipes
+// Initial load
 fetchRecipes();
-
