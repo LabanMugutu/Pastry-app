@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <title>PastryPal</title>
+  <!-- Link to CSS stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <h1>PastryPal 🍰</h1>
+    <!-- Search input -->
     <input type="text" id="search" placeholder="Search pastries..." />
+    
+    <!-- Filter by category -->
     <select id="filter">
       <option value="All">All</option>
       <option value="Breakfast">Breakfast</option>
@@ -16,8 +20,10 @@
     </select>
   </header>
 
+  <!-- Container for recipe cards -->
   <main id="recipe-list"></main>
 
+  <!-- Link to JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
