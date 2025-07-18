@@ -1,5 +1,7 @@
 // Replace this with your actual Render API URL
-const baseURL = "https://pastry-app.onrender.com/"
+//const baseURL = "https://pastry-app.onrender.com/"
+const baseURL = "https://pastry-app.onrender.com/recipes/";
+
 // DOM references
 const recipeList = document.getElementById("recipe-list");
 const searchInput = document.getElementById("search");
