@@ -4,8 +4,9 @@
   "description": "Pastry recipe app using HTML, CSS, JS and json-server",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
-  },
+  "start": "json-server --watch db.json --port 10000"
+},
+
   "keywords": [
     "json-server",
     "pastry",
