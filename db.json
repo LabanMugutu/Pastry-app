@@ -14,4 +14,11 @@
       "ingredients": ["Flour", "Eggs", "Butter", "Chocolate", "Cream"],
       "instructions": "Bake choux pastry, fill with cream, and top with chocolate."
     },
+    {
+      "id": 3,
+      "name": "Cinnamon Roll",
+      "category": "Breakfast",
+      "ingredients": ["Flour", "Sugar", "Cinnamon", "Butter", "Yeast"],
+      "instructions": "Roll dough with cinnamon filling and bake until golden."
+    },
 }
