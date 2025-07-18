@@ -63,3 +63,9 @@ filterSelect.addEventListener("change", () => {
       displayRecipes(filtered);
     });
 });
+// Event 3: Toggle favorite/unfavorite button text
+function toggleFavorite(button) {
+  button.textContent =
+    button.textContent === " Favorite" ? " Unfavorite" : "❤️Favorite";
+}
+
