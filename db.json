@@ -21,4 +21,11 @@
       "ingredients": ["Flour", "Sugar", "Cinnamon", "Butter", "Yeast"],
       "instructions": "Roll dough with cinnamon filling and bake until golden."
     },
+     {
+      "id": 4,
+      "name": "Apple Strudel",
+      "category": "Dessert",
+      "ingredients": ["Apples", "Pastry Sheets", "Sugar", "Cinnamon", "Raisins"],
+      "instructions": "Fill pastry with apple mix and bake until crispy."
+    },
 }
