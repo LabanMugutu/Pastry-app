@@ -1,1 +1,11 @@
-{}
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Classic Croissant",
+      "category": "Breakfast",
+      "ingredients": ["Flour", "Butter", "Yeast", "Milk", "Salt"],
+      "instructions": "Fold dough with butter, shape, proof, and bake."
+    },
+    
+}
