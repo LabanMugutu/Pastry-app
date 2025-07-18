@@ -28,4 +28,12 @@
       "ingredients": ["Apples", "Pastry Sheets", "Sugar", "Cinnamon", "Raisins"],
       "instructions": "Fill pastry with apple mix and bake until crispy."
     },
+     {
+      "id": 5,
+      "name": "Cheese Danish",
+      "category": "Breakfast",
+      "ingredients": ["Cream Cheese", "Sugar", "Pastry", "Egg", "Vanilla"],
+      "instructions": "Fill pastry with cheese mixture and bake until golden."
+    }
+  ]
 }
