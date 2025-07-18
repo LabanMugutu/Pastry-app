@@ -35,3 +35,10 @@ function displayRecipes(recipes) {
     recipeList.appendChild(card);
   });
 }
+// Event 1: Filter recipes by search term
+searchInput.addEventListener("input", () => {
+  fetch(baseURL)
+    .then(res => res.json())
+    .then(data => {
+      const searchTerm = searchInput.value.toLowerCase();
+
