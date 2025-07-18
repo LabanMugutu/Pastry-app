@@ -1,6 +1,5 @@
 // Replace this with your actual Render API URL
-const baseURL = "https://your-render-api-url.onrender.com/recipes";
-
+const baseURL = "https://pastry-app.onrender.com/"
 // DOM references
 const recipeList = document.getElementById("recipe-list");
 const searchInput = document.getElementById("search");
@@ -33,7 +32,7 @@ function displayRecipes(recipes) {
       <p><strong>Category:</strong> ${recipe.category}</p>
       <p><strong>Ingredients:</strong> ${recipe.ingredients.join(", ")}</p>
       <p>${recipe.instructions}</p>
-      <button class="favorite-btn">❤️ Favorite</button>
+      <button class="favorite-btn"> Favorite</button>
     `;
 
     // Event 3: Click to toggle favorite
