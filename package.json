@@ -1,0 +1,22 @@
+{
+  "name": "pastrypal",
+  "version": "1.0.0",
+  "description": "Pastry recipe app using HTML, CSS, JS and json-server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "json-server",
+    "pastry",
+    "recipes",
+    "render",
+    "frontend",
+    "backend"
+  ],
+  "author": "Laban Mugutu",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}
