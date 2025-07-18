@@ -39,3 +39,12 @@ input, select {
 .recipe-card h3 {
   margin-top: 0;
 }
+/* Style for the favorite button */
+.favorite-btn {
+  background: #ff7675;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
