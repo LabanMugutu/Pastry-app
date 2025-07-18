@@ -19,3 +19,11 @@ input, select {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+/* Container holding recipe cards */
+#recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
