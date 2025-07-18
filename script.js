@@ -41,4 +41,11 @@ searchInput.addEventListener("input", () => {
     .then(res => res.json())
     .then(data => {
       const searchTerm = searchInput.value.toLowerCase();
+ // Filter recipes by name (array iteration)
+      const filtered = data.filter(recipe =>
+        recipe.name.toLowerCase().includes(searchTerm)
+      );
 
+      displayRecipes(filtered);
+    });
+});
