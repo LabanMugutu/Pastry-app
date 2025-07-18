@@ -11,3 +11,11 @@ function fetchRecipes() {
       displayRecipes(data);        // Pass recipes to render function
     });
 }
+// Render the recipe cards on the page
+function displayRecipes(recipes) {
+  recipeList.innerHTML = ""; // Clear current content
+
+  recipes.forEach(recipe => {
+    // Create card container
+    const card = document.createElement("div");
+    card.className = "recipe-card";
