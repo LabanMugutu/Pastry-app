@@ -7,5 +7,11 @@
       "ingredients": ["Flour", "Butter", "Yeast", "Milk", "Salt"],
       "instructions": "Fold dough with butter, shape, proof, and bake."
     },
-    
+     {
+      "id": 2,
+      "name": "Chocolate Éclair",
+      "category": "Dessert",
+      "ingredients": ["Flour", "Eggs", "Butter", "Chocolate", "Cream"],
+      "instructions": "Bake choux pastry, fill with cream, and top with chocolate."
+    },
 }
