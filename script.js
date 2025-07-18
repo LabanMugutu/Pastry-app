@@ -49,3 +49,17 @@ searchInput.addEventListener("input", () => {
       displayRecipes(filtered);
     });
 });
+// Event 2: Filter recipes by category
+filterSelect.addEventListener("change", () => {
+  fetch(baseURL)
+    .then(res => res.json())
+    .then(data => {
+      const category = filterSelect.value;
+
+      // If "All" is selected, show everything; otherwise filter
+      const filtered =
+        category === "All" ? data : data.filter(r => r.category === category);
+
+      displayRecipes(filtered);
+    });
+});
