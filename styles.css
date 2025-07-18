@@ -35,3 +35,7 @@ input, select {
   width: 280px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+/* Remove top margin from recipe title */
+.recipe-card h3 {
+  margin-top: 0;
+}
