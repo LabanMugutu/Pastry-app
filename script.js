@@ -19,3 +19,11 @@ function displayRecipes(recipes) {
     // Create card container
     const card = document.createElement("div");
     card.className = "recipe-card";
+    // Add recipe content
+    card.innerHTML = `
+      <h3>${recipe.name}</h3>
+      <p><strong>Category:</strong> ${recipe.category}</p>
+      <p><strong>Ingredients:</strong> ${recipe.ingredients.join(", ")}</p>
+      <p>${recipe.instructions}</p>
+      <button class="favorite-btn"> Favorite</button>
+    `;
