@@ -5,3 +5,9 @@ body {
   background: #fffaf0;
   color: #333;
 }
+/* Header styles */
+header {
+  background: #f8c291;
+  padding: 20px;
+  text-align: center;
+}
